@@ -1,0 +1,8 @@
+<resources>
+    <integer name="com_vk_sdk_AppId">5136311</integer>
+
+
+    <string name="app_name">100грамм</string>
+    <string name="error">Авторизация не удалась :(</string>
+
+</resources>

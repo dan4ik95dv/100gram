@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:wave="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginActivity"
+    android:id="@+id/rootLayout">
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/frameLayout"
+        android:layout_above="@+id/loginPanel"
+        android:layout_alignParentTop="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <me.stogram.android.ui.widget.view.WaveView
+                android:id="@+id/wave_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                wave:above_wave_color="@color/wave_primary"
+                wave:blow_wave_color="@color/wave_secondary"
+                wave:progress="80"
+                wave:wave_height="little"
+                wave:wave_hz="normal"
+                wave:wave_length="middle"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginPanel"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="128dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_vk_button"
+            android:id="@+id/vkButton"
+            android:background="@color/vk_color"
+            android:text="Войти с помощью В Контакте"
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="4dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

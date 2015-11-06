@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="widthWave">100dp</dimen>
+    <dimen name="heightWave">100dp</dimen>
+    <dimen name="bigMargin">32dp</dimen>
+    <dimen name="buttonWidth">64dp</dimen>
+    <dimen name="miniMargin">8dp</dimen>
+</resources>
