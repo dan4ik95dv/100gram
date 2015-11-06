@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:wave="http://schemas.android.com/apk/res-auto"
     tools:context=".LoginActivity"
+    android:background="@color/colorPrimary"
     android:id="@+id/rootLayout">
 
     <FrameLayout
@@ -22,18 +23,11 @@
             android:layout_gravity="center"
             android:layout_marginBottom="8dp">
 
-            <me.stogram.android.ui.widget.view.WaveView
-                android:id="@+id/wave_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                wave:above_wave_color="@color/wave_primary"
-                wave:blow_wave_color="@color/wave_secondary"
-                wave:progress="80"
-                wave:wave_height="little"
-                wave:wave_hz="normal"
-                wave:wave_length="middle"
-                android:layout_alignParentTop="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stakan"
+                android:id="@+id/imageView" />
         </RelativeLayout>
 
     </FrameLayout>

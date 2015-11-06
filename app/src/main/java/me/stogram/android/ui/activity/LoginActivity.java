@@ -22,15 +22,11 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import me.stogram.android.R;
 
-import me.stogram.android.ui.widget.view.WaveView;
 import me.stogram.android.util.Constants;
 
 public class LoginActivity extends AppCompatActivity {
 
 
-
-    @Bind(R.id.wave_view)
-    WaveView waveView;
     @Bind(R.id.vkButton)
     Button mButtonVK;
 

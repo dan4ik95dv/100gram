@@ -7,18 +7,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * Created by Daniil Celikin on 06.11.2015.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
+
 public class RequestLoginUser {
-    @JsonProperty("accessKey")
+
+    @JsonProperty("access_key")
     String accessKey;
     @JsonProperty("email")
     String email;
+    @JsonProperty("vk_id")
+    String vkId;
 
-
-    public RequestLoginUser(String accessKey, String email) {
-        this.accessKey = accessKey;
-        this.email = email;
+    public String getVkId() {
+        return vkId;
     }
 
+    public void setVkId(String vkId) {
+        this.vkId = vkId;
+    }
 
     public String getAccessKey() {
         return accessKey;
@@ -41,6 +46,7 @@ public class RequestLoginUser {
         return "RequestLoginUser{" +
                 "accessKey='" + accessKey + '\'' +
                 ", email='" + email + '\'' +
+                ", vkId='" + vkId + '\'' +
                 '}';
     }
 }
