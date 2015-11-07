@@ -17,6 +17,12 @@ public class RequestLoginUser {
     @JsonProperty("vk_id")
     String vkId;
 
+    public RequestLoginUser(String accessKey, String email, String vkId) {
+        this.accessKey = accessKey;
+        this.email = email;
+        this.vkId = vkId;
+    }
+
     public String getVkId() {
         return vkId;
     }

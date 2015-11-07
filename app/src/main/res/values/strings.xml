@@ -3,6 +3,9 @@
 
 
     <string name="app_name">100грамм</string>
-    <string name="error">Авторизация не удалась :(</string>
+    <string name="auth_error">Авторизация не удалась :с</string>
+    <string name="connection_error">Что-то пошло не так :с</string>
 
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

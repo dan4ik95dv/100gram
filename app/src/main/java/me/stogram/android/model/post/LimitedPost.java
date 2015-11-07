@@ -12,10 +12,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
         String thumbImg;
         @JsonProperty("origin_img")
         String originImg;
-        @JsonProperty("published")
-        Integer published;
-        @JsonProperty("post_id")
-        String postId;
+        @JsonProperty("created")
+        Integer created;
+        @JsonProperty("updated")
+        Integer updated;
+        @JsonProperty("id")
+        String id;
 
     public String getThumbImg() {
         return thumbImg;
@@ -33,19 +35,27 @@ import com.fasterxml.jackson.annotation.JsonProperty;
         this.originImg = originImg;
     }
 
-    public Integer getPublished() {
-        return published;
+    public Integer getCreated() {
+        return created;
     }
 
-    public void setPublished(Integer published) {
-        this.published = published;
+    public void setCreated(Integer created) {
+        this.created = created;
     }
 
-    public String getPostId() {
-        return postId;
+    public Integer getUpdated() {
+        return updated;
     }
 
-    public void setPostId(String postId) {
-        this.postId = postId;
+    public void setUpdated(Integer updated) {
+        this.updated = updated;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

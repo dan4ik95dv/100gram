@@ -3,21 +3,21 @@ package me.stogram.android.model.comment.request;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import me.stogram.android.model.BaseRequest;
+
 
 /**
  * Created by Daniil Celikin on 07.11.2015.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class SendComment extends BaseRequest{
+public class SendComment {
     @JsonProperty("comment")
     String comment;
-    @JsonProperty("post_id")
-    String postId;
+    @JsonProperty("id")
+    String id;
 
     public SendComment(String comment, String postId) {
         this.comment = comment;
-        this.postId = postId;
+        this.id = postId;
     }
 
     public String getComment() {
@@ -28,19 +28,19 @@ public class SendComment extends BaseRequest{
         this.comment = comment;
     }
 
-    public String getPostId() {
-        return postId;
+    public String getId() {
+        return id;
     }
 
-    public void setPostId(String postId) {
-        this.postId = postId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "SendComment{" +
                 "comment='" + comment + '\'' +
-                ", postId='" + postId + '\'' +
+                ", id='" + id + '\'' +
                 '}';
     }
 }

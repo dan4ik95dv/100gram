@@ -1,10 +1,9 @@
-package me.stogram.android.model.feed.response;
+package me.stogram.android.model.profile;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
-
 
 import me.stogram.android.model.post.Post;
 
@@ -12,21 +11,21 @@ import me.stogram.android.model.post.Post;
  * Created by Daniil Celikin on 07.11.2015.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ResponseFeed{
-    @JsonProperty("feed")
+public class ExtendedProfile extends UserProfile{
+    @JsonProperty("posts")
     ArrayList<Post> posts;
 
-    public ArrayList<Post> getFeeds() {
+    public ArrayList<Post> getPosts() {
         return posts;
     }
 
-    public void setFeeds(ArrayList<Post> posts) {
+    public void setPosts(ArrayList<Post> posts) {
         this.posts = posts;
     }
 
     @Override
     public String toString() {
-        return "ResponseFeed{" +
+        return "ExtendedProfile{" +
                 "posts=" + posts +
                 '}';
     }

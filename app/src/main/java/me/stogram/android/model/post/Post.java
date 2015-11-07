@@ -17,16 +17,18 @@ public class Post {
     String thumbImg;
     @JsonProperty("origin_img")
     String originImg;
-    @JsonProperty("published")
-    Integer published;
+    @JsonProperty("created")
+    Integer created;
+    @JsonProperty("updated")
+    Integer updated;
     @JsonProperty("comment")
     String comment;
     @JsonProperty("likes_count")
     Integer likesCount;
     @JsonProperty("is_liked")
     Boolean isLiked;
-    @JsonProperty("post_id")
-    String postId;
+    @JsonProperty("id")
+    String id;
     @JsonProperty("comments")
     ArrayList<Comment> comments;
     @JsonProperty("user")
@@ -64,17 +66,21 @@ public class Post {
         this.originImg = originImg;
     }
 
-
-
-    public Integer getPublished() {
-        return published;
+    public Integer getCreated() {
+        return created;
     }
 
-    public void setPublished(Integer published) {
-        this.published = published;
+    public void setCreated(Integer created) {
+        this.created = created;
     }
 
+    public Integer getUpdated() {
+        return updated;
+    }
 
+    public void setUpdated(Integer updated) {
+        this.updated = updated;
+    }
 
     public Integer getLikesCount() {
         return likesCount;
@@ -84,12 +90,12 @@ public class Post {
         this.likesCount = likesCount;
     }
 
-    public String getPostId() {
-        return postId;
+    public String getId() {
+        return id;
     }
 
-    public void setPostId(String postId) {
-        this.postId = postId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public ArrayList<Comment> getComments() {

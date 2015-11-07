@@ -10,8 +10,8 @@ import me.stogram.android.model.profile.UserProfile;
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Comment {
-    @JsonProperty("comment_id")
-    String commentId;
+    @JsonProperty("id")
+    String id;
     @JsonProperty("comment")
     String comment;
     @JsonProperty("published")
@@ -20,12 +20,12 @@ public class Comment {
     UserProfile userProfile;
 
 
-    public String getCommentId() {
-        return commentId;
+    public String getId() {
+        return id;
     }
 
-    public void setCommentId(String commentId) {
-        this.commentId = commentId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getComment() {

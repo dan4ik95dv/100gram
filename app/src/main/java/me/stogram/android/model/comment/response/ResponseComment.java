@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 
-import me.stogram.android.model.BaseResponse;
+
 import me.stogram.android.model.comment.Comment;
 
 /**
@@ -13,7 +13,7 @@ import me.stogram.android.model.comment.Comment;
  */
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ResponseComment extends BaseResponse {
+public class ResponseComment {
     @JsonProperty("comment")
     Comment comment;
 

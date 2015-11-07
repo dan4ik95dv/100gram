@@ -12,8 +12,8 @@ public class UserProfile {
     String thumbPhoto;
     @JsonProperty("origin_photo")
     String originPhoto;
-    @JsonProperty("user_id")
-    String userId;
+    @JsonProperty("id")
+    String id;
     @JsonProperty("first_name")
     String firstName;
     @JsonProperty("last_name")
@@ -39,12 +39,12 @@ public class UserProfile {
         this.thumbPhoto = thumbPhoto;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getId() {
+        return id;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -84,7 +84,7 @@ public class UserProfile {
         return "UserProfile{" +
                 "thumbPhoto='" + thumbPhoto + '\'' +
                 ", originPhoto='" + originPhoto + '\'' +
-                ", userId='" + userId + '\'' +
+                ", id='" + id + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", status='" + status + '\'' +

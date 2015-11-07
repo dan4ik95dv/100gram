@@ -9,27 +9,43 @@
 
     <FrameLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:id="@+id/frameLayout"
-        android:layout_above="@+id/loginPanel"
-        android:layout_alignParentTop="true">
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
 
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="8dp">
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
 
-            <ImageView
+            <me.stogram.android.ui.widget.view.WaveView
+                android:id="@+id/wave_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/stakan"
-                android:id="@+id/imageView" />
+                android:background="@android:color/transparent"
+                wave:above_wave_color="@color/wave_primary"
+                wave:blow_wave_color="@color/wave_secondary"
+                wave:progress="50"
+                wave:wave_height="little"
+                wave:wave_hz="normal"
+                wave:wave_length="middle"
+                android:layout_alignParentTop="true"/>
         </RelativeLayout>
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/stakan"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
     </FrameLayout>
 
     <RelativeLayout
@@ -38,7 +54,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/loginPanel"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="64dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -50,7 +66,7 @@
             android:drawableLeft="@drawable/ic_vk_button"
             android:id="@+id/vkButton"
             android:background="@color/vk_color"
-            android:text="Войти с помощью В Контакте"
+            android:text="Войти с помощью Вконтакте"
             android:textColor="@android:color/white"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
