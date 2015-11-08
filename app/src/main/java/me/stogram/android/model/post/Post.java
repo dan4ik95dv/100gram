@@ -3,6 +3,8 @@ package me.stogram.android.model.post;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import org.parceler.Parcel;
+
 import java.util.ArrayList;
 
 import me.stogram.android.model.comment.Comment;
@@ -11,18 +13,19 @@ import me.stogram.android.model.profile.UserProfile;
 /**
  * Created by Daniil Celikin on 07.11.2015.
  */
+@Parcel
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Post {
-    @JsonProperty("thumb_img")
+    @JsonProperty("thumb")
     String thumbImg;
-    @JsonProperty("origin_img")
+    @JsonProperty("origin")
     String originImg;
     @JsonProperty("created")
     Integer created;
     @JsonProperty("updated")
     Integer updated;
-    @JsonProperty("comment")
-    String comment;
+    @JsonProperty("body")
+    String body;
     @JsonProperty("likes_count")
     Integer likesCount;
     @JsonProperty("is_liked")
@@ -34,8 +37,8 @@ public class Post {
     @JsonProperty("user")
     UserProfile user;
 
-    public String getComment() {
-        return comment;
+    public String getBody() {
+        return body;
     }
 
     public Boolean getIsLiked() {
@@ -46,8 +49,8 @@ public class Post {
         this.isLiked = isLiked;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setBody(String body) {
+        this.body = body;
     }
 
     public String getThumbImg() {

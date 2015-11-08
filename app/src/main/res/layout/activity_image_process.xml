@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <me.stogram.android.ui.widget.view.CommonTitleBar
+        android:id="@+id/title_layout"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/back"
+        app:rightBtnIcon="@drawable/next"
+        app:titleTxt=""
+        app:leftBtnTxt="@string/back"
+        app:rightBtnTxt="@string/done" />
+
+    <LinearLayout
+        android:id="@+id/main_area"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/drawing_view_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <jp.co.cyberagent.android.gpuimage.GPUImageView
+                android:id="@+id/gpuimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/toolbar_area"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <it.sephiroth.android.library.widget.HListView
+                android:id="@+id/list_tools"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/common_background"
+                android:gravity="center_vertical"
+                android:overScrollMode="always"
+                app:hlv_dividerWidth="@dimen/margin_15px"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_area"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/tabMaxHeight"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal" >
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/sticker_btn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/templates"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </carbon.widget.LinearLayout>
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/filter_btn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/filters"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </carbon.widget.LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

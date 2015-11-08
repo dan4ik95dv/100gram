@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/tools"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <RelativeLayout
+                    android:id="@+id/headerPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:minHeight="32dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentTop="true">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/userIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        app:riv_border_width="2dip"
+                        app:riv_border_color="#333333"
+                        app:riv_oval="true"
+                        android:layout_margin="8dp" />
+
+                    <com.devspark.robototextview.widget.RobotoTextView
+                        android:id="@+id/userTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_toRightOf="@+id/userIcon"
+                        android:layout_toEndOf="@+id/userIcon"
+                        android:layout_alignTop="@+id/userIcon"
+                        android:layout_alignBottom="@+id/userIcon"
+                        android:gravity="center" />
+                    <com.devspark.robototextview.widget.RobotoTextView
+                        android:id="@+id/createdPost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:maxLines="1"
+                        android:textSize="12sp"
+                        android:textColor="@color/textTimeColor"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bodyPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/headerPost"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_above="@+id/footerPost">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imagePost"
+                        android:scaleType="centerCrop" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/footerPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:minHeight="32dp"
+                    android:background="#ededed"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true">
+                    <ImageView
+                        android:id="@+id/iconLike"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/ic_favorite_outline_grey_400_18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="8dp" />
+
+                    <com.devspark.robototextview.widget.RobotoTextView
+                        android:id="@+id/likeCounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_toRightOf="@+id/iconLike"
+                        android:layout_toEndOf="@+id/iconLike"
+                        android:layout_alignTop="@+id/iconLike"
+                        android:layout_alignBottom="@+id/iconLike"
+                        android:gravity="center" />
+                </RelativeLayout>
+            </RelativeLayout>

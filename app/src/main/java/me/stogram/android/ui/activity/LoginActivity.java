@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import com.vk.sdk.VKAccessToken;
 import com.vk.sdk.VKCallback;
 import com.vk.sdk.VKSdk;
+import com.vk.sdk.api.VKApi;
 import com.vk.sdk.api.VKError;
 
 import butterknife.Bind;
@@ -21,13 +23,14 @@ import me.stogram.android.application.App;
 import me.stogram.android.io.api.client.RestClient;
 import me.stogram.android.model.auth.request.RequestLoginUser;
 import me.stogram.android.model.auth.response.ResponseLoginUser;
+import me.stogram.android.ui.base.BaseActivity;
 import me.stogram.android.util.Constants;
 import retrofit.Call;
 import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity {
 
 
     @Bind(R.id.vkButton)
@@ -38,8 +41,13 @@ public class LoginActivity extends AppCompatActivity {
 
     @OnClick(R.id.vkButton)
     void onVkButtonClick() {
-        if (!VKSdk.isLoggedIn())
-        VKSdk.login(this, Constants.VK.MyScopes);
+        if (!VKSdk.isLoggedIn()){
+            VKSdk.login(this, Constants.VK.MyScopes);
+            showProgressDialog(getString(R.string.please_wait));
+        }else{
+            startMainActivity();
+        }
+
     }
 
     @Override
@@ -47,25 +55,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
 
         if (VKSdk.isLoggedIn())
             startMainActivity();
     }
 
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -73,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResult(VKAccessToken res) {
                 signIn(res);
+                dismissProgressDialog();
             }
 
             @Override
@@ -98,12 +94,14 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Response<ResponseLoginUser> response, Retrofit retrofit) {
                 if (response.isSuccess()) {
                     App.setToken(response.body().getToken());
+                    dismissProgressDialog();
                     startMainActivity();
                 }
             }
 
             @Override
             public void onFailure(Throwable t) {
+                dismissProgressDialog();
                 Toast.makeText(LoginActivity.this, getResources().getString(R.string.connection_error), Toast.LENGTH_LONG).show();
             }
         });

@@ -3,9 +3,12 @@ package me.stogram.android.model.profile;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import org.parceler.Parcel;
+
 /**
  * Created by Daniil Celikin on 07.11.2015.
  */
+@Parcel
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserProfile {
     @JsonProperty("thumb_photo")

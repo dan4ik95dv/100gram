@@ -4,12 +4,34 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="black_overlay">#66000000</color>
-
+    <color name="textTimeColor">#2E2E2E</color>
+    <color name="border">#8E8E8E</color>
     <color name="vk_color">#45668e</color>
     <color name="fb_color">#3b5998</color>
     <color name="gp_color">#dd4b39</color>
-
+    <color name="tabColorSecondary">#303F9F</color>
+    <color name="tabColorPrimary">#333366</color>
     <color name="wave_primary">#4b99cccc</color>
     <color name="wave_secondary">#4b66cccc</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="gray">#666666</color>
+    <color name="dialog_title">#ffff0000</color>
+    <color name="common_background">#f5f3f0</color>
+    <color name="txt_color_gray_3">#cbc4c6</color>
+    <color name="pink">#ff5d65</color>
+    <color name="brown">#cccccc</color>
+    <color name="pale_pink">#cbc4c6</color>
+    <color name="divider">#e8e3e3</color>
+    <color name="tabcolor">#6e686a</color>
+    <color name="crop_bg">#D5D5D5</color>
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+    <color name="blue">#2196F3</color>
 
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="light_grey">#ffbebebe</color>
 </resources>

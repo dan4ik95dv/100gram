@@ -2,24 +2,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white"
     tools:context=".LoginActivity">
-
-    <android.support.design.widget.TabLayout
-        style="@style/CustomTabLayout"
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabMode="fixed"
-        app:tabGravity="fill"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/tabs" />
+        android:layout_height="match_parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/btn_area"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tabMaxHeight"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="bottom">
+            <carbon.widget.LinearLayout
+                android:layout_width="96dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="?attr/selectableItemBackground"
+                android:id="@+id/feedButton"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_view_day_white_48dp"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="5dp" />
+            </carbon.widget.LinearLayout>
+            <carbon.widget.LinearLayout
+                android:layout_width="96dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="?attr/selectableItemBackground"
+                android:id="@+id/profileButton"
+                android:layout_gravity="right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_account_box_white_48dp"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="5dp" />
+            </carbon.widget.LinearLayout>
+        </RelativeLayout>
+
+        <carbon.widget.ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:clickable="true"
+            android:id="@+id/ButtonTakePhoto"
+            android:src="@drawable/ic_photo"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dp" />
+
+
 </RelativeLayout>
