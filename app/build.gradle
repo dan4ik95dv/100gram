@@ -9,15 +9,15 @@ android {
     signingConfigs {
         debug {
             storeFile file('C:/Developer/100gram/keys.jks')
-            storePassword '143718qazwsxedc'
+            storePassword ''
             keyAlias 'StogramKey'
-            keyPassword '143718'
+            keyPassword ''
         }
         release {
             storeFile file('C:/Developer/100gram/keys.jks')
-            storePassword '143718qazwsxedc'
+            storePassword ''
             keyAlias 'StogramKey'
-            keyPassword '143718'
+            keyPassword ''
         }
     }
     buildTypes {
